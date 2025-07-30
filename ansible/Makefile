@@ -51,7 +51,7 @@ ssh-db1:
 	ssh $(PROXY_CMD) -i $(DB1_KEY) $(DB1_USER)@$(DB1_HOST)
 
 forget:
-	ssh-keygen -f '/home/theo/.ssh/known_hosts' -R '10.0.2.5'
-	ssh-keygen -f '/home/theo/.ssh/known_hosts' -R '10.0.3.5'
-	ssh-keygen -f '/home/theo/.ssh/known_hosts' -R '10.0.4.5'
-	ssh-keygen -f '/home/theo/.ssh/known_hosts' -R '10.0.5.5'
+	ssh-keygen -f '~/.ssh/known_hosts' -R '10.0.2.5'
+	ssh-keygen -f '~/.ssh/known_hosts' -R '10.0.3.5'
+	ssh-keygen -f '~/.ssh/known_hosts' -R '10.0.4.5'
+	ssh-keygen -f '~/.ssh/known_hosts' -R '10.0.5.5'
