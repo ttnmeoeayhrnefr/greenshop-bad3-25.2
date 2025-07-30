@@ -3,6 +3,7 @@ install:
 	cd terraform && make install-aws
 	cd ansible && make install-ansible
 	cd ansible && make requirements
+	chmod 600 ./docs/admin.pem
 
 configure:
 	cd terraform && make configure-aws
