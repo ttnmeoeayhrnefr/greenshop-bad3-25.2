@@ -4,6 +4,13 @@ resource "aws_security_group" "GreenShop-SG-ADM" {
   vpc_id      = aws_vpc.GreenShop-vpc.id
 
   ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
+
+  ingress {
     description = "Allow SSH from External"
     from_port   = 22
     to_port     = 22
@@ -24,6 +31,13 @@ resource "aws_security_group" "GreenShop-SG-RPROXY" {
   name        = "GreenShop-SG-RPROXY"
   description = "GreenShop-SG-RPROXY"
   vpc_id      = aws_vpc.GreenShop-vpc.id
+
+  ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
 
   ingress {
     description = "Allow SSH from Admin"
@@ -56,6 +70,13 @@ resource "aws_security_group" "GreenShop-SG-WEB" {
   vpc_id      = aws_vpc.GreenShop-vpc.id
 
   ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
+
+  ingress {
     description = "Allow SSH from Admin"
     from_port   = 22
     to_port     = 22
@@ -84,6 +105,13 @@ resource "aws_security_group" "GreenShop-SG-DB" {
   name        = "GreenShop-SG-DB"
   description = "GreenShop-SG-DB"
   vpc_id      = aws_vpc.GreenShop-vpc.id
+
+  ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
 
   ingress {
     description = "Allow SSH from Admin"
@@ -116,6 +144,13 @@ resource "aws_security_group" "GreenShop-SG-JENKINS" {
   vpc_id      = aws_vpc.GreenShop-vpc.id
 
   ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
+
+  ingress {
     description = "Allow SSH from External"
     from_port   = 22
     to_port     = 22
@@ -146,6 +181,13 @@ resource "aws_security_group" "GreenShop-SG-PROMETHEUS" {
   vpc_id      = aws_vpc.GreenShop-vpc.id
 
   ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
+
+  ingress {
     description = "Allow all inbound traffic"
     from_port   = 0
     to_port     = 0
@@ -166,6 +208,13 @@ resource "aws_security_group" "GreenShop-SG-GRAFANA" {
   name        = "GreenShop-SG-GRAFANA"
   description = "GreenShop-SG-GRAFANA"
   vpc_id      = aws_vpc.GreenShop-vpc.id
+
+  ingress {
+    description = "Allow icmp"
+    from_port = -1
+    to_port = -1
+    protocol = "icmp"
+  }
 
   ingress {
     description = "Allow all inbound traffic"
